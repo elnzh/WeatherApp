@@ -5,17 +5,39 @@
   align-items: center;
   padding:25px;
 }
-.input{
-  padding:10px;
+
+.inputContainer{
+  padding:10px 10px;
+  flex-direction:row;
+  width: 100%;
+  padding: 25px 25px;
+  margin: 8px 8px;
+  display: inline-block;
+}
+.inputContainer input{
+  padding:15px 80px;
   width:80%;
-  margin: auto;
+  margin: 5px 25px;
   border: 1px solid lightslategray;
   border-radius:6px;
+  text-align: center;
   font-size: 16px;
 }
 
-.input:focus{
+.inputContainer input:focus{
   outline: none;
+}
+.inputContainer button{
+  margin: auto;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+}
+
+p {
+  font-size:30px;
+  font-weight:200;
 }
 
 .weather-data{
@@ -36,3 +58,15 @@
   font-size:30px;
   font-weight:200;
 }
+
+.weather-forecast{
+  margin-top: 100px;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+
+
+
+

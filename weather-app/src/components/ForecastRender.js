@@ -18,7 +18,7 @@ export default function ForecastRender({
     function getEachDaysData(){
         let iter=0;
         for(let i = 0;i<time.length;i++){
-            if(time[i]==0){
+            if(time[i]===0){
                 day_index[iter]=i;
                 iter++;
             }
@@ -45,6 +45,12 @@ export default function ForecastRender({
     }
 
    
+
+
+
+    const today = new Date();
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']     
+
    
 
     return (
@@ -53,10 +59,10 @@ export default function ForecastRender({
                 <TempChart id ='chart' temp={tempStatus} time={timeStatus}/>
             </div>
             <div className='weather-forecast'>
-                <button onClick={()=>handelButtons(0)}>today</button>
-                <button onClick={()=>handelButtons(1)}>tmr</button>
-                <button onClick={()=>handelButtons(2)}>next</button>
-                <button onClick={()=>handelButtons(3)}>next</button>
+                <button className = "button1" onClick={()=>handelButtons(0)}>{days[today.getDay()%7]}</button>
+                <button className = "button1" onClick={()=>handelButtons(1)}>{days[(today.getDay()+1)%7]}</button>
+                <button className = "button1" onClick={()=>handelButtons(2)}>{days[(today.getDay()+2)%7]}</button>
+                <button className = "button1" onClick={()=>handelButtons(3)}>{days[(today.getDay()+3)%7]}</button>
             </div>
         </div>);
 }

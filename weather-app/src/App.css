@@ -46,6 +46,13 @@ p {
   flex-direction:column;
   align-items:center;
 }
+
+
+.weather-discription {
+  flex-direction:row;
+  display:flex;
+
+}
 .city{
   font-size:30px;
   font-weight:200;

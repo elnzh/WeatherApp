@@ -1,7 +1,3 @@
-/**
- * Reference: Arpan Neupane
- * Youtube: https://www.youtube.com/watch?v=rtR4s626ebE
- */
 
 import React,{useState,useEffect} from 'react'
 import './App.css'
@@ -89,9 +85,15 @@ function settemp(){
       ):(
         <div>
         <div className='weather-data'>
+          
           <p className="city">{weather.name}</p>
           <p className="temp">{weather.main.temp} °C</p>
+          
+   
           <p className="weather">{weather.weather[0].description}</p>
+          
+          
+
           
          
           <div>
